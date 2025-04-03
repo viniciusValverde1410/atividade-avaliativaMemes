@@ -335,8 +335,24 @@ export default function Home() {
           {/* FIM COMPONENTE: NewsletterSection */}
         </div>
 
-        {/* COMPONENTE: Sidebar */}
-        <Sidebar/>
+        {/* COMPONENTE: Sidebar
+        
+        const upcomingEvents = [
+        {
+          id: 1,
+          title: "Competição de Memes 2025",
+          date: "15 de Maio, 2025",
+          participants: 356,
+        },
+        {
+          id: 2,
+          title: "Workshop: Como Criar Memes Virais",
+          date: "22 de Maio, 2025",
+          participants: 127,
+        },
+      ];
+        */}
+        <Sidebar eventDate={"15 de Maio, 2025"} eventParticipants={"participants: 356"} eventTitle={"Competição de Memes 2025"}/>
         {/* FIM COMPONENTE: Sidebar */}
       </div>
 
