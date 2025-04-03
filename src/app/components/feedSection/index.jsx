@@ -1,6 +1,7 @@
-import styles from './'
+import styles from './feedSection.module.css';
+import InteractionBar from '../interactionBar';
 
-const feedSection = () => { 
+const FeedSection = ({memes}) => { 
 
 return (
     <section className={styles.feedSection}>
@@ -20,8 +21,8 @@ return (
       {memes.map((meme) => (
         // COMPONENTE: MemeCard
         <div key={meme.id} className={styles.memeCard}>
-          <div className={styles.memeCardHeader}>
-            <div className={styles.memeAuthor}>
+          <div className={styles.meme.cardHeader}>
+            <div className={styles.meme.author}>
               <img src={meme.authorAvatar} alt={meme.author} />
               <span>{meme.author}</span>
             </div>
@@ -52,3 +53,5 @@ return (
 )
 
 }
+
+export default FeedSection;
