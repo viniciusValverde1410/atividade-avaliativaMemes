@@ -9,6 +9,7 @@ import CreatorsSection from "../components/creatorsSection";
 import NewsletterSection from "../components/newsletterSection";
 import Footer from "../components/footer";
 
+
 export default function Home() {
 
   //Array de itens de navegação para serem passados como props
