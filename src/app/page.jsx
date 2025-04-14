@@ -1,14 +1,14 @@
 import styles from "./page.module.css";
 import Header from "../components/header";
+import Sidebar from "../components/sidebar";
 
 export default function Home() {
-  
+
   const navItems = [
-    { id: 2, title: "Trending" },
-    { id: 3, title: "Create" }, { id: 4, title: "Categories" },
-    { id: 5, title: "Profile" },
+    { id: 1, title: "Trending" }, { id: 2, title: "Create" }, 
+    { id: 3, title: "Categories" }, { id: 4, title: "Profile" },
   ]
-  
+
   // Array de dados dos memes para serem passados como props
   const memes = [
     {
@@ -176,7 +176,7 @@ export default function Home() {
     <div className={styles.container}>
 
       {/* COMPONENTE: Header */}
-      <Header navItems = {navItems} />
+      <Header navItems={navItems} />
       {/* FIM COMPONENTE: Header */}
 
       <div className={styles.mainContent}>
@@ -388,63 +388,7 @@ export default function Home() {
         </div>
 
         {/* COMPONENTE: Sidebar */}
-        <aside className={styles.sidebar}>
-          <div className={styles.sidebarSection}>
-            <h3 className={styles.sidebarTitle}>Eventos Próximos</h3>
-            {upcomingEvents.map((event) => (
-              // COMPONENTE: EventCard
-              <div key={event.id} className={styles.eventCard}>
-                <h4 className={styles.eventTitle}>{event.title}</h4>
-                <p className={styles.eventDate}>{event.date}</p>
-                <p className={styles.eventParticipants}>
-                  {event.participants} participantes
-                </p>
-                <button className={styles.eventButton}>Participar</button>
-              </div>
-              // FIM COMPONENTE: EventCard
-            ))}
-          </div>
-
-          <div className={styles.sidebarSection}>
-            <h3 className={styles.sidebarTitle}>MemeVerse Premium</h3>
-            <div className={styles.premiumCard}>
-              <h4 className={styles.premiumTitle}>
-                Desbloqueie recursos exclusivos!
-              </h4>
-              <ul className={styles.premiumFeatures}>
-                <li>Sem anúncios</li>
-                <li>Uploads ilimitados</li>
-                <li>Ferramentas de edição avançadas</li>
-                <li>Estatísticas detalhadas</li>
-              </ul>
-              <button className={styles.premiumButton}>
-                Experimentar Grátis
-              </button>
-            </div>
-          </div>
-
-          <div className={styles.sidebarSection}>
-            <h3 className={styles.sidebarTitle}>Tags Populares</h3>
-            <div className={styles.tagCloud}>
-              <span className={`${styles.tag} ${styles.tagLarge}`}>
-                #memeday
-              </span>
-              <span className={styles.tag}>#programação</span>
-              <span className={`${styles.tag} ${styles.tagMedium}`}>
-                #humor
-              </span>
-              <span className={styles.tag}>#escola</span>
-              <span className={`${styles.tag} ${styles.tagLarge}`}>
-                #trabalhoremoto
-              </span>
-              <span className={styles.tag}>#segundafeira</span>
-              <span className={`${styles.tag} ${styles.tagMedium}`}>
-                #games
-              </span>
-              <span className={styles.tag}>#nofilter</span>
-            </div>
-          </div>
-        </aside>
+        <Sidebar upcomingEvents={upcomingEvents} />
         {/* FIM COMPONENTE: Sidebar */}
       </div>
 
