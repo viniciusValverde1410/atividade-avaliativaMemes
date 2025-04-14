@@ -1,4 +1,5 @@
 import styles from "./creatorsSection.module.css";
+import CreatorCard from "../creatorCard";
 
 const CreatorsSection = ({ topCreators }) => {
     return (
@@ -7,21 +8,7 @@ const CreatorsSection = ({ topCreators }) => {
         <div className={styles.creatorsGrid}>
           {topCreators.map((creator) => (
             // COMPONENTE: CreatorCard
-            <div key={creator.id} className={styles.creatorCard}>
-              <img
-                src={creator.avatar}
-                alt={creator.name}
-                className={styles.creatorAvatar}
-              />
-              <h3 className={styles.creatorName}>{creator.name}</h3>
-              <p className={styles.creatorBio}>{creator.bio}</p>
-              <div className={styles.creatorStats}>
-                <span className={styles.creatorFollowers}>
-                  {creator.followers} seguidores
-                </span>
-              </div>
-              <button className={styles.followButton}>Seguir</button>
-            </div>
+            <CreatorCard creator={creator} key={creator.id}/>
             // FIM COMPONENTE: CreatorCard
           ))}
         </div>
