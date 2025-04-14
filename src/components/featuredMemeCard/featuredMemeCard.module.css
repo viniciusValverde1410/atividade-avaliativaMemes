@@ -4,36 +4,36 @@
     overflow: hidden;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
-  }
-  
-  .featuredCard:hover {
+}
+
+.featuredCard:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-  }
-  
-  .featuredImageContainer {
+}
+
+.featuredImageContainer {
     position: relative;
     height: 200px;
     overflow: hidden;
-  }
+}
 
-  .sectionTitle {
+.sectionTitle {
     font-size: 22px;
     margin: 0 0 20px 0;
-  }
+}
 
-  .featuredImage {
+.featuredImage {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: transform 0.5s;
-  }
-  
-  .featuredCard:hover .featuredImage {
+}
+
+.featuredCard:hover .featuredImage {
     transform: scale(1.05);
-  }
-  
-  .trendingBadge {
+}
+
+.trendingBadge {
     position: absolute;
     top: 10px;
     right: 10px;
@@ -43,34 +43,34 @@
     border-radius: 20px;
     font-size: 12px;
     font-weight: bold;
-  }
-  
-  .featuredContent {
+}
+
+.featuredContent {
     padding: 15px;
     background-color: white;
-  }
-  
-  .featuredTitle {
+}
+
+.featuredTitle {
     font-size: 16px;
     margin: 0 0 8px 0;
     color: #333;
-  }
-  
-  .featuredInfo {
+}
+
+.featuredInfo {
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
-  
-  .featuredAuthor {
+}
+
+.featuredAuthor {
     font-size: 13px;
     color: #666;
-  }
-  
-  .featuredCategory {
+}
+
+.featuredCategory {
     background-color: #eef0fd;
     color: #4e5de4;
     padding: 3px 8px;
     border-radius: 20px;
     font-size: 12px;
-  }
+}

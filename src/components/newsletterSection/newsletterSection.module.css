@@ -1,4 +1,3 @@
-/* Estilos da Newsletter */
 .newsletterSection {
     display: flex;
     background: linear-gradient(135deg, #4e5de4 0%, #8a94f8 100%);
@@ -6,44 +5,44 @@
     overflow: hidden;
     color: white;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  }
-  
-  .newsletterContent {
+}
+
+.newsletterContent {
     flex: 1;
     padding: 40px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-  }
-  
-  .newsletterTitle {
+}
+
+.newsletterTitle {
     font-size: 28px;
     margin: 0 0 15px 0;
     font-weight: bold;
-  }
-  
-  .newsletterDescription {
+}
+
+.newsletterDescription {
     font-size: 16px;
     margin: 0 0 20px 0;
     opacity: 0.9;
     line-height: 1.5;
-  }
-  
-  .newsletterForm {
+}
+
+.newsletterForm {
     display: flex;
     margin-bottom: 15px;
-  }
-  
-  .newsletterInput {
+}
+
+.newsletterInput {
     flex: 1;
     padding: 12px;
     border: none;
     border-radius: 30px 0 0 30px;
     outline: none;
     font-size: 14px;
-  }
-  
-  .newsletterButton {
+}
+
+.newsletterButton {
     background-color: #ff5252;
     color: white;
     border: none;
@@ -52,27 +51,27 @@
     font-weight: bold;
     cursor: pointer;
     transition: all 0.3s;
-  }
-  
-  .newsletterButton:hover {
+}
+
+.newsletterButton:hover {
     background-color: #e04747;
-  }
-  
-  .newsletterDisclaimer {
+}
+
+.newsletterDisclaimer {
     font-size: 12px;
     opacity: 0.7;
     margin: 0;
-  }
-  
-  .newsletterImageContainer {
+}
+
+.newsletterImageContainer {
     flex: 1;
     max-width: 300px;
     position: relative;
     overflow: hidden;
-  }
-  
-  .newsletterImage {
+}
+
+.newsletterImage {
     width: 100%;
     height: 100%;
     object-fit: cover;
-  }
+}

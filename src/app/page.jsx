@@ -11,8 +11,9 @@ import Footer from "../components/footer";
 
 export default function Home() {
 
+  //Array de itens de navegação para serem passados como props
   const navItems = [
-    { id: 1, title: "Trending" }, { id: 2, title: "Create" }, 
+    { id: 1, title: "Trending" }, { id: 2, title: "Create" },
     { id: 3, title: "Categories" }, { id: 4, title: "Profile" },
   ]
 
@@ -182,46 +183,31 @@ export default function Home() {
   return (
     <div className={styles.container}>
 
-      {/* COMPONENTE: Header */}
       <Header navItems={navItems} />
-      {/* FIM COMPONENTE: Header */}
 
       <div className={styles.mainContent}>
         <div className={styles.contentArea}>
-          
-          {/* COMPONENTE: HeroSection */}
-        <HeroSection memeOfTheDay={memeOfTheDay} />
-          {/* FIM COMPONENTE: HeroSection */}
 
-          {/* COMPONENTE: CategoriesSection */}
+          <HeroSection memeOfTheDay={memeOfTheDay} />
+
           <CategoriesSection categories={categories} />
-          {/* FIM COMPONENTE: CategoriesSection */}
 
-          {/* COMPONENTE: Feed */}
           <FeedSection memes={memes} />
-          {/* FIM COMPONENTE: Feed */}
 
-          {/* COMPONENTE: FeaturedMemesSection */}
-          <FeaturedSection featuredMemes = {featuredMemes} />
-          {/* FIM COMPONENTE: FeaturedMemesSection */}
+          <FeaturedSection featuredMemes={featuredMemes} />
 
-          {/* COMPONENTE: CreatorsSection */}
           <CreatorsSection topCreators={topCreators} />
-          {/* FIM COMPONENTE: CreatorsSection */}
 
-          {/* COMPONENTE: NewsletterSection */}
           <NewsletterSection />
-          {/* FIM COMPONENTE: NewsletterSection */}
+
         </div>
 
-        {/* COMPONENTE: Sidebar */}
         <Sidebar upcomingEvents={upcomingEvents} />
-        {/* FIM COMPONENTE: Sidebar */}
+
       </div>
 
-      {/* COMPONENTE: Footer */}
-      <Footer/>
-      {/* FIM COMPONENTE: Footer */}
+      <Footer />
+
     </div>
   );
 }
