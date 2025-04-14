@@ -2,6 +2,7 @@ import styles from "./page.module.css";
 import Header from "../components/header";
 import Sidebar from "../components/sidebar";
 import HeroSection from "../components/heroSection";
+import CategoriesSection from "@/components/categoriesSection";
 
 export default function Home() {
 
@@ -182,25 +183,13 @@ export default function Home() {
 
       <div className={styles.mainContent}>
         <div className={styles.contentArea}>
+          
           {/* COMPONENTE: HeroSection */}
         <HeroSection memeOfTheDay={memeOfTheDay} />
           {/* FIM COMPONENTE: HeroSection */}
 
           {/* COMPONENTE: CategoriesSection */}
-          <section className={styles.categoriesSection}>
-            <h2 className={styles.sectionTitle}>Explore por Categorias</h2>
-            <div className={styles.categoriesGrid}>
-              {categories.map((category) => (
-                <div key={category.id} className={styles.categoryCard}>
-                  <span className={styles.categoryIcon}>{category.icon}</span>
-                  <h3 className={styles.categoryName}>{category.name}</h3>
-                  <span className={styles.categoryCount}>
-                    {category.count} memes
-                  </span>
-                </div>
-              ))}
-            </div>
-          </section>
+          <CategoriesSection categories={categories} />
           {/* FIM COMPONENTE: CategoriesSection */}
 
           {/* COMPONENTE: Feed */}
