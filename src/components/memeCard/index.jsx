@@ -1,4 +1,5 @@
 import styles from "./memeCard.module.css"
+import InteractionBar from "../interactionBar"
 
 const MemeCard = ({ meme }) => {
     return (
@@ -20,24 +21,7 @@ const MemeCard = ({ meme }) => {
           <p className={styles.memeDescription}>{meme.description}</p>
 
           {/* COMPONENTE: InteractionBar */}
-          <div className={styles.interactionBar}>
-            <div className={styles.interactionButton}>
-              <span>👍</span>
-              <span>{meme.likes}</span>
-            </div>
-            <div className={styles.interactionButton}>
-              <span>💬</span>
-              <span>{meme.comments}</span>
-            </div>
-            <div className={styles.interactionButton}>
-              <span>🔄</span>
-              <span>Share</span>
-            </div>
-            <div className={styles.interactionButton}>
-              <span>🔖</span>
-              <span>Save</span>
-            </div>
-          </div>
+            <InteractionBar meme = {meme}/>
           {/* FIM COMPONENTE: InteractionBar */}
         </div>
       </div>
