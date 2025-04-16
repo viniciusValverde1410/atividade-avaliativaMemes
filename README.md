@@ -80,7 +80,7 @@ atividade-avaliativaMemes/
 ## Desafios enfrentados e soluções aplicadas 💪
 - O maior desafio foi compreender e implementar a estrutura de componentes com props de forma eficiente. Para isso, utilizei a documentação do React O Copilot do Github e exemplos de projetos similares como referência.
 
-## Tecnologias Utilizadas
+## Tecnologias Utilizadas 💻
 
 - ![React](https://img.shields.io/badge/-React-61DAFB?style=flat-square&logo=react&logoColor=black) **React**: Biblioteca JavaScript para construção de interfaces de usuário.
 - ![JavaScript](https://img.shields.io/badge/-JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black) **JavaScript**: Para a lógica do projeto e manipulação de dados.
