@@ -12,11 +12,53 @@ import Footer from "../components/footer";
 
 export default function Home() {
 
+  const logo = [
+    { id: 1, title: "MemeVerse", span: "🌟" },
+  ]
+
   //Array de itens de navegação para serem passados como props
   const navItems = [
-    { id: 1, title: "Trending" }, { id: 2, title: "Create" },
-    { id: 3, title: "Categories" }, { id: 4, title: "Profile" },
+    { id: 1, title: "Home" },
+    { id: 2, title: "Trending" },
+    { id: 3, title: "Create" },
+    { id: 4, title: "Categories" },
+    { id: 5, title: "Profile" },
   ]
+
+  const navItemsEmpresa = [
+    { id: 1, title: "Sobre nós" },
+    { id: 2, title: "Carreiras" },
+    { id: 3, title: "Contato" },
+    { id: 4, title: "Blog" },
+  ]
+
+  const navItemsRecurso = [
+    { id: 1, title: "Ajuda" },
+    { id: 2, title: "Suporte" },
+    { id: 3, title: "API" },
+    { id: 4, title: "Documentação" },
+  ]
+
+  const navItemsLegal = [
+    { id: 1, title: "Termos de Serviço" },
+    { id: 2, title: "Política de Privacidade" },
+    { id: 3, title: "Diretrizes da Comunidade" },
+    { id: 4 , title: "A LGPD no Memeverse" },
+  ]
+
+  const redes = [
+    { id: 1, icon: "📞" },
+    { id: 2, icon: "🐦" },
+    { id: 3, icon: "📸" },
+    { id: 4, icon: "📱" },
+  ]
+
+  const premiumFeatures = [
+    { id: 1, title: "Acesso a memes exclusivos" },
+    { id: 2, title: "Sem anúncios" },
+    { id: 3, title: "Filtros avançados" },
+    { id: 4, title: "Suporte prioritário" },
+  ];
 
   // Array de dados dos memes para serem passados como props
   const memes = [
@@ -184,7 +226,7 @@ export default function Home() {
   return (
     <div className={styles.container}>
 
-      <Header navItems={navItems} />
+      <Header logo={logo} navItems={navItems} />
 
       <div className={styles.mainContent}>
         <div className={styles.contentArea}>
@@ -203,11 +245,11 @@ export default function Home() {
 
         </div>
 
-        <Sidebar upcomingEvents={upcomingEvents} />
+        <Sidebar upcomingEvents={upcomingEvents} premiumFeatures={premiumFeatures} />
 
       </div>
 
-      <Footer />
+      <Footer logo={logo} navItems={navItems} navItemsEmpresa={navItemsEmpresa} navItemsRecurso={navItemsRecurso} navItemsLegal={navItemsLegal} redes={redes}/>
 
     </div>
   );

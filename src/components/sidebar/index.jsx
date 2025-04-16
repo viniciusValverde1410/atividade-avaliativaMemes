@@ -1,7 +1,7 @@
 import styles from "./sidebar.module.css";
 import EventCard from "../eventCard/";
 
-const Sidebar = ({ upcomingEvents }) => {
+const Sidebar = ({ upcomingEvents, premiumFeatures }) => {
     return (
         <aside className={styles.sidebar}>
             <div className={styles.sidebarSection}>
@@ -20,10 +20,11 @@ const Sidebar = ({ upcomingEvents }) => {
                         Desbloqueie recursos exclusivos!
                     </h4>
                     <ul className={styles.premiumFeatures}>
-                        <li>Sem anúncios</li>
-                        <li>Uploads ilimitados</li>
-                        <li>Ferramentas de edição avançadas</li>
-                        <li>Estatísticas detalhadas</li>
+                    {premiumFeatures.map((premiumF,) => (
+                    <li key={premiumF.id} href="#">
+                        {premiumF.title}
+                    </li>
+                ))}
                     </ul>
                     <button className={styles.premiumButton}>
                         Experimentar Grátis

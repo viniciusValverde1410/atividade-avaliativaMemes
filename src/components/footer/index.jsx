@@ -1,11 +1,11 @@
 import styles from "./footer.module.css";
 
-const Footer = () => {
+const Footer = ({logo, navItems, navItemsRecurso, navItemsEmpresa,navItemsLegal, redes  }) => {
     return (
               <footer className={styles.footer}>
         <div className={styles.footerTop}>
           <div className={styles.footerLogo}>
-            <h2>MemeVerse</h2>
+            <h2>{logo[0].title} </h2>
             <p>O universo dos melhores memes da internet.</p>
           </div>
 
@@ -13,41 +13,45 @@ const Footer = () => {
             <div className={styles.footerNavSection}>
               <h3>Navegação</h3>
               <nav className={styles.footerNav}>
-                <a href="#">Home</a>
-                <a href="#">Trending</a>
-                <a href="#">Create</a>
-                <a href="#">Categories</a>
-                <a href="#">Profile</a>
+              {navItems.map((navItems) => (
+                    <a key={navItems.id} href="#">
+                        {navItems.title}
+                    </a>
+                ))}
+                <a href="#"></a>
               </nav>
             </div>
 
             <div className={styles.footerNavSection}>
               <h3>Recursos</h3>
               <nav className={styles.footerNav}>
-                <a href="#">Editor de Memes</a>
-                <a href="#">Templates</a>
-                <a href="#">API</a>
-                <a href="#">Para Desenvolvedores</a>
+              {navItemsRecurso.map((navItemsR) => (
+                    <a key={navItemsR.id} href="#">
+                        {navItemsR.title}
+                    </a>
+                ))}
               </nav>
             </div>
 
             <div className={styles.footerNavSection}>
               <h3>Empresa</h3>
               <nav className={styles.footerNav}>
-                <a href="#">Sobre nós</a>
-                <a href="#">Carreiras</a>
-                <a href="#">Blog</a>
-                <a href="#">Contato</a>
+              {navItemsEmpresa.map((navItemsE) => (
+                    <a key={navItemsE.id} href="#">
+                        {navItemsE.title}
+                    </a>
+                ))}
               </nav>
             </div>
 
             <div className={styles.footerNavSection}>
               <h3>Legal</h3>
               <nav className={styles.footerNav}>
-                <a href="#">Termos de Uso</a>
-                <a href="#">Privacidade</a>
-                <a href="#">Cookies</a>
-                <a href="#">LGPD</a>
+              {navItemsLegal.map((navItemsL) => (
+                    <a key={navItemsL.id} href="#">
+                        {navItemsL.title}
+                    </a>
+                ))}
               </nav>
             </div>
           </div>
@@ -56,18 +60,14 @@ const Footer = () => {
         <div className={styles.footerBottom}>
           <p>© 2025 MemeVerse - Todos os direitos reservados</p>
           <div className={styles.socialLinks}>
-            <a href="#" className={styles.socialLink}>
-              <span>📱</span>
-            </a>
-            <a href="#" className={styles.socialLink}>
-              <span>📘</span>
-            </a>
-            <a href="#" className={styles.socialLink}>
-              <span>📸</span>
-            </a>
-            <a href="#" className={styles.socialLink}>
-              <span>🐦</span>
-            </a>
+
+          {redes.map((rede) => (
+                    <a key={rede.id} href="#" className={styles.socialLink} >
+                    <span>{rede.icon}</span>
+                    </a>
+                ))}
+
+
           </div>
         </div>
       </footer>
